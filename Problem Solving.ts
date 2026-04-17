@@ -49,13 +49,7 @@ function fizzBuzz(n: number) {
     }
 
 }
-const fizzBuzzResult = fizzBuzz(15)
-
-
-
-
-
-
+// const fizzBuzzResult = fizzBuzz(15)
 
 
 
@@ -68,8 +62,18 @@ const fizzBuzzResult = fizzBuzz(15)
 // Edge Case: Array with all negative numbers.
 // Hint: Initialize a variable with the first element of the array.
 
-
-
+function findLargestNumber(numbers: number[]) {
+    let largestNumber: number = 0
+    for (let i = 0; i < numbers.length; i++) {
+        const element = numbers[i];
+        if (element > largestNumber) {
+            largestNumber = element
+        }
+    }
+    return largestNumber
+}
+const largestNumberResult = findLargestNumber([40, 60, 20, 80, 100, 10,200])
+// console.log(largestNumberResult)
 
 
 
