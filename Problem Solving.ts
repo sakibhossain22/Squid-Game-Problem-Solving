@@ -72,17 +72,8 @@ function findLargestNumber(numbers: number[]) {
     }
     return largestNumber
 }
-const largestNumberResult = findLargestNumber([40, 60, 20, 80, 100, 10,200])
+const largestNumberResult = findLargestNumber([40, 60, 20, 80, 100, 10, 200])
 // console.log(largestNumberResult)
-
-
-
-
-
-
-
-
-
 
 
 // 4. Check for Palindrome
@@ -94,7 +85,15 @@ const largestNumberResult = findLargestNumber([40, 60, 20, 80, 100, 10,200])
 // Edge Case: "racecar" (true) vs "hello" (false).
 // Hint: Compare the string with its reverse.
 
-
+function checkForPalindrome(text: string) {
+    const reversedText = text.split("").reverse().join("")
+    if (reversedText === text) {
+        return true
+    }
+    return false
+}
+const checkForPalindromeResult = checkForPalindrome("racecar")
+console.log(checkForPalindromeResult)
 
 
 
