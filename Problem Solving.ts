@@ -109,13 +109,6 @@ function countVowel(text: string) {
 
 
 
-
-
-
-
-
-
-
 // 7. Factorial Calculation
 // Task: Find the factorial of a non-negative integer n.
 
@@ -125,7 +118,20 @@ function countVowel(text: string) {
 // Edge Case: n = 0 (Factorial of 0 is 1).
 // Hint: Use a for-loop or recursion.
 
-
+function calculateFactorial(n: number) {
+    if (n < 0 || n > 12) {
+        return "Please input a number 0 to 12";
+    }
+    if (n === 0) {
+        return 1;
+    }
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result = result * i
+    }
+    return result
+}
+console.log(calculateFactorial(5))
 
 
 
