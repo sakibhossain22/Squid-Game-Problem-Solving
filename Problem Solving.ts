@@ -7,12 +7,19 @@
 // Hint: Look into built-in string slicing or a simple loop.
 
 function reverseString(text: string) {
+    if (text.length > 1000) {
+        return "String is too long! (Max 1000 characters)";
+    }
+    if (text.length === 0) {
+        return "String is empty!";
+    }
     const rev = text.split("").reverse()
     const reversed = rev.join("")
     return reversed
 }
-const result = reverseString("arif")
-console.log(result)
+const result = reverseString("level")
+// console.log(result)
+
 // 2. FizzBuzz
 // Task: Print numbers from 1 to n. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz"; for multiples of both, print "FizzBuzz".
 // Input: integer n
@@ -20,9 +27,29 @@ console.log(result)
 // Constraints: 1 <= n <= 100.
 // Edge Case: n = 1.
 // Hint: Use the modulo operator % to check for remainders.
+function fizzBuzz(n: number) {
+    if (n < 1 || n > 100) {
+        console.log("Please enter a number between 1 and 100.");
+        return;
+    }
+    for (let i = 1; i <= n; i++) {
+        const modulusOf3 = i % 3
+        const modulusOf5 = i % 5
+        if (modulusOf3 === 0 && modulusOf5 === 0) {
+            console.log("FizzBuzz")
+        }
+        if (modulusOf3 === 0) {
+            console.log("Fizz")
+        }
+        if (modulusOf5 === 0) {
+            console.log("Buzz")
+        }
 
+        console.log(i)
+    }
 
-
+}
+const fizzBuzzResult = fizzBuzz(15)
 
 
 
