@@ -93,7 +93,7 @@ function checkForPalindrome(text: string) {
     return false
 }
 const checkForPalindromeResult = checkForPalindrome("racecar")
-console.log(checkForPalindromeResult)
+// console.log(checkForPalindromeResult)
 
 
 
@@ -113,8 +113,16 @@ console.log(checkForPalindromeResult)
 // Edge Case: Empty array (should return 0).
 // Hint: Use an accumulator variable inside a loop.
 
-
-
+function sumOfArray(numbers: number[]) {
+    let sum:number = 0
+    for (let i = 0; i < numbers.length; i++) {
+        const element = numbers[i];
+        sum = element + sum
+    }
+    return sum
+}
+const sumOfArrayResult = sumOfArray([5,10,20,5,10,5])
+// console.log(sumOfArrayResult)
 
 
 
