@@ -1,10 +1,4 @@
 // 1. Reverse a String
-// Task: Write a function that takes a string and returns it reversed.
-// Input: string s
-// Output: string
-// Constraints: s.length <= 1000.
-// Edge Case: Single character strings or empty strings.
-// Hint: Look into built-in string slicing or a simple loop.
 
 function reverseString(text: string) {
     if (text.length > 1000) {
@@ -17,16 +11,11 @@ function reverseString(text: string) {
     const reversed = rev.join("")
     return reversed
 }
-const result = reverseString("level")
-// console.log(result)
+// console.log(reverseString("level"))
 
 // 2. FizzBuzz
 // Task: Print numbers from 1 to n. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz"; for multiples of both, print "FizzBuzz".
-// Input: integer n
-// Output: Printed lines or a list of strings.
-// Constraints: 1 <= n <= 100.
-// Edge Case: n = 1.
-// Hint: Use the modulo operator % to check for remainders.
+
 function fizzBuzz(n: number) {
     if (n < 1 || n > 100) {
         console.log("Please enter a number between 1 and 100.");
@@ -49,18 +38,10 @@ function fizzBuzz(n: number) {
     }
 
 }
-// const fizzBuzzResult = fizzBuzz(15)
-
+// console.log(fizzBuzz(15))
 
 
 // 3. Find the Largest Number in an Array
-// Task: Given an array of integers, return the largest value.
-
-// Input: int[] nums
-// Output: integer
-// Constraints: Array will have at least one element.
-// Edge Case: Array with all negative numbers.
-// Hint: Initialize a variable with the first element of the array.
 
 function findLargestNumber(numbers: number[]) {
     let largestNumber: number = 0
@@ -73,17 +54,10 @@ function findLargestNumber(numbers: number[]) {
     return largestNumber
 }
 const largestNumberResult = findLargestNumber([40, 60, 20, 80, 100, 10, 200])
-// console.log(largestNumberResult)
+// console.log(findLargestNumber([40, 60, 20, 80, 100, 10, 200]))
 
 
 // 4. Check for Palindrome
-// Task: Determine if a word reads the same forward and backward.
-
-// Input: string s
-// Output: boolean
-// Constraints: Case-insensitive, ignore non-alphanumeric characters if you want a challenge.
-// Edge Case: "racecar" (true) vs "hello" (false).
-// Hint: Compare the string with its reverse.
 
 function checkForPalindrome(text: string) {
     const reversedText = text.split("").reverse().join("")
@@ -93,65 +67,44 @@ function checkForPalindrome(text: string) {
     return false
 }
 const checkForPalindromeResult = checkForPalindrome("racecar")
-// console.log(checkForPalindromeResult)
-
-
-
-
-
-
-
-
+// console.log(checkForPalindrome("racecar"))
 
 
 // 5. Sum of Array Elements
-// Task: Calculate the total sum of all numbers in an array.
-
-// Input: int[] nums
-// Output: integer
-// Constraints: nums.length <= 500.
-// Edge Case: Empty array (should return 0).
-// Hint: Use an accumulator variable inside a loop.
 
 function sumOfArray(numbers: number[]) {
-    let sum:number = 0
+    let sum: number = 0
     for (let i = 0; i < numbers.length; i++) {
         const element = numbers[i];
         sum = element + sum
     }
     return sum
 }
-const sumOfArrayResult = sumOfArray([5,10,20,5,10,5])
-// console.log(sumOfArrayResult)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(sumOfArray([5, 10, 20, 5, 10, 5])
 
 // 6. Count Vowels
-// Task: Count how many vowels (a, e, i, o, u) are in a given string.
 
-// Input: string s
-// Output: integer
-// Constraints: s contains English letters and spaces.
-// Edge Case: String with no vowels.
-// Hint: Iterate through the string and check if each character is in a "vowel" set.
+function countVowel(text: string) {
+    const checkCharacter = /^[A-Za-z\s]*$/
+    if (!checkCharacter.test(text)) {
+        return "Only English letters and spaces are allowed"
+    }
+    let countVowel = 0
+    const vowelSet = /[aeiou]/i
+    const splitText = text.split("")
+
+    for (let i = 0; i < splitText.length; i++) {
+        const element = splitText[i];
+        if (vowelSet.test(element)) {
+            countVowel++
+        }
+
+    }
+    return countVowel
 
 
-
-
+}
+// console.log(countVowel("sakib"))
 
 
 
