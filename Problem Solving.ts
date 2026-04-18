@@ -165,16 +165,6 @@ function fibonacciSequence(n: number) {
 // console.log(fibonacciSequence(10))
 
 
-
-
-
-
-
-
-
-
-
-
 // 10. Find the Minimum in an Array
 // Task: Given an array of integers, return the smallest value.
 
@@ -183,17 +173,23 @@ function fibonacciSequence(n: number) {
 // Constraints: Array will not be empty.
 // Edge Case: Multiple elements with the same minimum value.
 // Hint: Similar logic to finding the maximum.
+function findMinimumInAnArray(numbers: number[]) {
+    if (numbers.length === 0) {
+        return "Array will not be empty."
+    }
+    let minNumber: number = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        const element = numbers[i];
+
+        if (minNumber > element) {
+            minNumber = element
+        }
+    }
+    return minNumber
+}
 
 
-
-
-
-
-
-
-
-
-
+// console.log(findMinimumInAnArray([10, 5, 20, 2, 14, 15, 233, 100]))
 
 
 
