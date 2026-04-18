@@ -112,12 +112,6 @@ function countVowel(text: string) {
 // 7. Factorial Calculation
 // Task: Find the factorial of a non-negative integer n.
 
-// Input: integer n
-// Output: integer
-// Constraints: 0 <= n <= 12.
-// Edge Case: n = 0 (Factorial of 0 is 1).
-// Hint: Use a for-loop or recursion.
-
 function calculateFactorial(n: number) {
     if (n < 0 || n > 12) {
         return "Please input a number 0 to 12";
@@ -131,41 +125,27 @@ function calculateFactorial(n: number) {
     }
     return result
 }
-console.log(calculateFactorial(5))
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(calculateFactorial(5))
 
 
 
 // 8. Even or Odd List
 // Task: Given an array of numbers, return a new array containing only the even numbers.
 
-// Input: int[] nums
-// Output: int[]
-// Constraints: nums.length <= 100.
-// Edge Case: Array with no even numbers.
-// Hint: Use the modulo operator inside a filter condition.
-
-
-
-
-
-
-
-
-
-
-
+function findEvenNumbers(numbers: number[]) {
+    if (numbers.length >= 100) {
+        return "length of array cannot be more than 100"
+    }
+    let evenNumbers: number[] = []
+    for (let i = 0; i < numbers.length; i++) {
+        const element = numbers[i];
+        if (element % 2 === 0) {
+            evenNumbers.push(element)
+        }
+    }
+    return evenNumbers
+}
+// console.log(findEvenNumbers([5, 10, 50, 20, 29, 47, 63, 40]))
 
 
 
