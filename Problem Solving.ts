@@ -166,13 +166,7 @@ function fibonacciSequence(n: number) {
 
 
 // 10. Find the Minimum in an Array
-// Task: Given an array of integers, return the smallest value.
 
-// Input: int[] nums
-// Output: integer
-// Constraints: Array will not be empty.
-// Edge Case: Multiple elements with the same minimum value.
-// Hint: Similar logic to finding the maximum.
 function findMinimumInAnArray(numbers: number[]) {
     if (numbers.length === 0) {
         return "Array will not be empty."
@@ -187,8 +181,6 @@ function findMinimumInAnArray(numbers: number[]) {
     }
     return minNumber
 }
-
-
 // console.log(findMinimumInAnArray([10, 5, 20, 2, 14, 15, 233, 100]))
 
 
@@ -197,13 +189,18 @@ function findMinimumInAnArray(numbers: number[]) {
 // 11. Multiplication Table
 // Task: Generate a multiplication table for a number n up to 10.
 
-// Input: integer n
-// Output: List of strings (e.g., "5 x 1 = 5").
-// Constraints: 1 <= n <= 100.
-// Edge Case: n = 1.
-// Hint: Use a simple loop from 1 to 10.
+function multiplicationTable(n: number) {
+    if (n < 1 || n > 100) {
+        return "Please enter a number between 1 and 100.";
+    }
+    let table: string[] = []
 
-
+    for (let i = 1; i <= 10; i++) {
+        table.push((`${n} x ${i} = ${n * i}`))
+    }
+    return table
+}
+console.log(multiplicationTable(1000))
 
 
 
