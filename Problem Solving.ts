@@ -22,10 +22,10 @@ function fizzBuzz(n: number) {
         if (modulusOf3 === 0 && modulusOf5 === 0) {
             console.log("FizzBuzz")
         }
-        if (modulusOf3 === 0) {
+        else if (modulusOf3 === 0) {
             console.log("Fizz")
         }
-        if (modulusOf5 === 0) {
+        else if (modulusOf5 === 0) {
             console.log("Buzz")
         }
 
@@ -35,7 +35,7 @@ function fizzBuzz(n: number) {
 }
 
 function findLargestNumber(numbers: number[]) {
-    let largestNumber: number = 0
+    let largestNumber: number = numbers[0]
     for (let i = 0; i < numbers.length; i++) {
         const element = numbers[i];
         if (element > largestNumber) {
