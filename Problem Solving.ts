@@ -151,14 +151,18 @@ function findEvenNumbers(numbers: number[]) {
 
 // 9. Fibonacci Sequence
 // Task: Generate the first n numbers of the Fibonacci sequence.
-
-// Input: integer n
-// Output: int[]
-// Constraints: n >= 1.
-// Edge Case: n = 1.
-// Hint: Start with [0, 1] and add the last two elements to get the next.
-
-
+function fibonacciSequence(n: number) {
+    if (n === 1) {
+        return [0];
+    }
+    let fiboNum = [0, 1]
+    for (let i = 2; i < n; i++) {
+        let next = fiboNum[i - 1] + fiboNum[i - 2]
+        fiboNum.push(next)
+    }
+    return fiboNum
+}
+// console.log(fibonacciSequence(10))
 
 
 
