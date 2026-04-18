@@ -1,4 +1,3 @@
-// 1. Reverse a String
 
 function reverseString(text: string) {
     if (text.length > 1000) {
@@ -11,10 +10,6 @@ function reverseString(text: string) {
     const reversed = rev.join("")
     return reversed
 }
-// console.log(reverseString("level"))
-
-// 2. FizzBuzz
-// Task: Print numbers from 1 to n. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz"; for multiples of both, print "FizzBuzz".
 
 function fizzBuzz(n: number) {
     if (n < 1 || n > 100) {
@@ -38,10 +33,6 @@ function fizzBuzz(n: number) {
     }
 
 }
-// console.log(fizzBuzz(15))
-
-
-// 3. Find the Largest Number in an Array
 
 function findLargestNumber(numbers: number[]) {
     let largestNumber: number = 0
@@ -53,11 +44,6 @@ function findLargestNumber(numbers: number[]) {
     }
     return largestNumber
 }
-const largestNumberResult = findLargestNumber([40, 60, 20, 80, 100, 10, 200])
-// console.log(findLargestNumber([40, 60, 20, 80, 100, 10, 200]))
-
-
-// 4. Check for Palindrome
 
 function checkForPalindrome(text: string) {
     const reversedText = text.split("").reverse().join("")
@@ -66,11 +52,6 @@ function checkForPalindrome(text: string) {
     }
     return false
 }
-const checkForPalindromeResult = checkForPalindrome("racecar")
-// console.log(checkForPalindrome("racecar"))
-
-
-// 5. Sum of Array Elements
 
 function sumOfArray(numbers: number[]) {
     let sum: number = 0
@@ -80,12 +61,10 @@ function sumOfArray(numbers: number[]) {
     }
     return sum
 }
-// console.log(sumOfArray([5, 10, 20, 5, 10, 5])
-
-// 6. Count Vowels
 
 function countVowel(text: string) {
     const checkCharacter = /^[A-Za-z\s]*$/
+    
     if (!checkCharacter.test(text)) {
         return "Only English letters and spaces are allowed"
     }
@@ -104,13 +83,6 @@ function countVowel(text: string) {
 
 
 }
-// console.log(countVowel("sakib"))
-
-
-
-
-// 7. Factorial Calculation
-// Task: Find the factorial of a non-negative integer n.
 
 function calculateFactorial(n: number) {
     if (n < 0 || n > 12) {
@@ -125,12 +97,6 @@ function calculateFactorial(n: number) {
     }
     return result
 }
-// console.log(calculateFactorial(5))
-
-
-
-// 8. Even or Odd List
-// Task: Given an array of numbers, return a new array containing only the even numbers.
 
 function findEvenNumbers(numbers: number[]) {
     if (numbers.length >= 100) {
@@ -145,12 +111,7 @@ function findEvenNumbers(numbers: number[]) {
     }
     return evenNumbers
 }
-// console.log(findEvenNumbers([5, 10, 50, 20, 29, 47, 63, 40]))
 
-
-
-// 9. Fibonacci Sequence
-// Task: Generate the first n numbers of the Fibonacci sequence.
 function fibonacciSequence(n: number) {
     if (n === 1) {
         return [0];
@@ -162,10 +123,7 @@ function fibonacciSequence(n: number) {
     }
     return fiboNum
 }
-// console.log(fibonacciSequence(10))
 
-
-// 10. Find the Minimum in an Array
 
 function findMinimumInAnArray(numbers: number[]) {
     if (numbers.length === 0) {
@@ -181,13 +139,6 @@ function findMinimumInAnArray(numbers: number[]) {
     }
     return minNumber
 }
-// console.log(findMinimumInAnArray([10, 5, 20, 2, 14, 15, 233, 100]))
-
-
-
-
-// 11. Multiplication Table
-// Task: Generate a multiplication table for a number n up to 10.
 
 function multiplicationTable(n: number) {
     if (n < 1 || n > 100) {
@@ -200,74 +151,49 @@ function multiplicationTable(n: number) {
     }
     return table
 }
-console.log(multiplicationTable(1000))
 
+function checkPrimeNumber(n: number) {
+    if (n > 1000) {
+        return "Please input a number between 1 to 100"
+    }
+    if (n <= 1) {
+        return false
+    }
+    if (n === 2) return true;
 
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
 
+    return true;
+}
 
+function removeDuplicate(numbers: number[]) {
+    let newArray: number[] = []
+    for (let i = 0; i < numbers.length; i++) {
+        const element = numbers[i];
+        if (!newArray.includes(element)) {
+            newArray.push(element)
+        }
+    }
+    return newArray
+}
 
+function celsiusToFahrenheit(celsius: number): number {
 
+    const fahrenheit = (celsius * 9 / 5) + 32;
+    return fahrenheit;
+}
 
-
-
-
-
-
-// 12. Check Prime Number
-// Task: Determine if a number n is prime (only divisible by 1 and itself).
-
-// Input: integer n
-// Output: boolean
-// Constraints: 1 <= n <= 1000.
-// Edge Case: n = 1 (not prime), n = 2 (prime).
-// Hint: Check divisibility from 2 up to the square root of n.
-
-
-
-
-
-
-
-
-// 13. Remove Duplicates from a List
-// Task: Given an array, return a new array with duplicate values removed.
-
-// Input: int[] nums
-// Output: int[]
-// Constraints: Order of elements should be preserved.
-// Edge Case: Array where all elements are the same.
-// Hint: Use a "Set" data structure or check if an element is already in the result list.
-
-
-
-
-
-
-
-
-// 14. Convert Celsius to Fahrenheit
-// Task: Convert a temperature from Celsius to Fahrenheit.
-
-// Input: float celsius
-// Output: float
-// Constraints: Formula: (C * 9/5) + 32.
-// Edge Case: Negative temperatures.
-// Hint: Basic arithmetic operation.
-
-
-
-
-
-
-
-
-
-
-// 15. Count Occurrences of a Character
-// Task: Given a string and a character, find how many times that character appears in the string.
-
-// Input: string s, char c
-// Output: integer
-// Constraints: Case-sensitive.
-// Edge Case: Character not present in the string.
-// Hint: Use a counter variable and loop through the string.
+function countOccurenceesOfCharacters(text: string, char: string) {
+    let splt = text.split("")
+    let count: number = 0
+    splt.map(s => {
+        if (char.toLocaleLowerCase() === s.toLocaleLowerCase()) {
+            count++
+        }
+    })
+    return count
+}
